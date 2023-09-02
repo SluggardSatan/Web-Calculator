@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: blue;
+        }
+        
+        #body {
+            background-color: yellow;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 14px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            transition: border-color 0.9s ease, box-shadow 0.5s ease;
+            cursor: pointer;
+            color: chocolate;
+        }
+
+        input:hover {
+            border-color: white;
+            background-color: green;
+            color: whitesmoke;
+        }
+
+        input:focus {
+            outline: auto;
+            border-color: black;
+            box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+        }
+
+        input::placeholder {
+            color: #999;
+        }
+
+        .output {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            font-size: 20px;
+            background-color: White;
+            color: White; /* Changed font-color to color */
+            text-align: center;
+            transition: background-color 0.9s ease;
+        }
+
+        .output:hover {
+            background-color: Red;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+<div id="body">
+    <input type="number" id="first">
+    <input type="number" id="second">
+    <input type="submit" id="add" value="Add">
+    <input type="submit" id="subtract" value="Subtract">
+    <input type="submit" id="multiply" value="Multiply">
+    <input type="submit" id="divide" value="Divide">
+    <div id="result">"Result"</div>
+</div>
+<script src="webapp/js/kotlin.js"></script>
+<script src="webapp/js/InputElement.js"></script>
+</body>
+</html>
